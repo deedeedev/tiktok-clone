@@ -19,14 +19,18 @@ export interface Video {
             image: string;
         };
     }[];
-    comments: {
-        comment: string;
-        _key: string;
-        postedBy: {
-            _ref: string;
-        };
-    }[];
+    comments: IComment[];
     userId: string;
+}
+
+export interface IComment {
+    comment: string;
+    length?: number;
+    _key: string;
+    postedBy: {
+        _ref: string;
+        _id: string;
+    };
 }
 
 export interface IUser {
